@@ -57,7 +57,7 @@ def telegram_bot(title, content):
     if not GlobalVariable.TG_BOT_TOKEN or not GlobalVariable.TG_USER_ID:
         print("Telegram推送的TG_BOT_TOKEN或者TG_USER_ID未设置!!")
         return
-    send_data = {"chat_id": GlobalVariable.TG_USER_ID, "text": title + '\n\n' + content, "disable_web_page_preview": "true"}
+    send_data = {"chat_id": GlobalVariable.TG_USER_ID, "text": content, "disable_web_page_preview": "true"}
     res = requests.post(
         url='https://api.telegram.org/bot%s/sendMessage' % (GlobalVariable.TG_BOT_TOKEN), data=send_data)
     if res.status_code == 200:
