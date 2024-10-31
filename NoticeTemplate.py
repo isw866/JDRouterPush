@@ -1,7 +1,7 @@
 # 普通模板
 def normalTemplate():
     content = """
-🥳今日收益:{total_today}，可用积分:{avail_today}
+🐶 今日：{total_today}🫘，可用：{avail_today}🫘
 """
     return content
 
