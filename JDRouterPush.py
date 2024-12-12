@@ -255,17 +255,17 @@ def resultDisplay():
         if satisfiedTimes != "":
             point_infos += "\n    - 累计在线：" + str(satisfiedTimes) + "天"
         if pointInfo.get("runInfo"):
-            point_infos += "\n    - 当前网速：" + pointInfo["speed"] \
-                           + "\n    - 当前IP：" + pointInfo["wanip"] \
-                           + "\n    - 当前模式：" + pointInfo["model"] \
-                           + "\n    - 固件版本：" + pointInfo["rom"]
+            #point_infos += "\n    - 当前网速：" + pointInfo["speed"] \
+                           #+ "\n    - 当前IP：" + pointInfo["wanip"] \
+                           #+ "\n    - 当前模式：" + pointInfo["model"] \
+                           #+ "\n    - 固件版本：" + pointInfo["rom"]
         if pointInfo.get("pluginInfo"):
             point_infos += "\n    - 插件状态：" + pointInfo["status"] \
                            + "\n    - 缓存大小：" + pointInfo["cache_size"]
         point_infos += "\n    - 在线时间：" + pointInfo.get("onlineTime", "---") \
                        #+ "\n    - 最近到期积分：" + str(recentExpireAmount) \
                        #+ "\n    - 最近到期时间：" + recentExpireTime \
-                       #+ "\n    - 最近" + str(GlobalVariable.records_num) + "条记录："
+                       + "\n    - 最近" + str(GlobalVariable.records_num) + "条记录："
         pointRecords = pointInfo["pointRecords"]
         if pointInfo.get("pointRecords") is not None:
             for pointRecord in pointRecords:
