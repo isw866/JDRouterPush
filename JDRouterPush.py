@@ -247,7 +247,7 @@ def resultDisplay():
         if pointInfo.get("satisfiedTimes"):
             satisfiedTimes = pointInfo["satisfiedTimes"]
 
-        point_infos += "\n" + "- " + GlobalVariable.device_name.get(str(mac[-6:]), GlobalVariable.device_list[mac][
+        point_infos += "\n" + "🗂 " + GlobalVariable.device_name.get(str(mac[-6:]), GlobalVariable.device_list[mac][
             "device_name"]) + "👉" \
                        + "\n    - 今日积分：" + str(todayPointIncome) \
                        + "\n    - 可用积分：" + str(amount) \
