@@ -2,9 +2,7 @@
 def normalTemplate():
     content = """
 🐶 {date}\n
-今日：{total_today}🫘，可用：{avail_today}🫘 \n
-**设备信息**
-{detail}
+今日：{total_today}🫘，可用：{avail_today}🫘
 """
     return content
 
