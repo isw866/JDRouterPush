@@ -3,7 +3,10 @@ name: Keep Repository Active
 on:
   schedule:
     - cron: '0 0 1 * *'  # 每月1号 00:00 UTC 运行
-  workflow_dispatch:     # 支持手动运行
+  workflow_dispatch:
+
+permissions:
+  contents: write  # 👈 添加这一行，授予 push 权限
 
 jobs:
   keepalive:
@@ -21,4 +24,4 @@ jobs:
       - name: Keepalive commit
         run: |
           git commit --allow-empty -m "chore: keepalive [skip ci]"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
